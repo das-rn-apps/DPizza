@@ -6,7 +6,7 @@ import { LoadingSpinner } from '../components/common/LoadingSpinner';
 import { EmptyState } from '../components/common/EmptyState';
 import { Button } from '../components/ui/Button';
 import { fetchPizzaById } from '../api/fakeApi'; // Import the specific fetch function
-import type { Pizza } from '../api/types';
+import type { Pizza } from '../types';
 
 const PizzaDetailPage: React.FC = () => {
     const { id } = useParams<{ id: string }>();

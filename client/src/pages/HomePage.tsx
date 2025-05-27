@@ -6,7 +6,8 @@ import { usePizzaStore } from '../store/pizzaStore';
 import { PizzaCard } from '../components/pizza/PizzaCard';
 import { LoadingSpinner } from '../components/common/LoadingSpinner';
 import { useCartStore } from '../store/cartStore';
-import type { Pizza } from '../api/types';
+import type { Pizza } from '../types';
+import HeroSection from '../components/parts/HeroSection';
 
 const HomePage: React.FC = () => {
     const { pizzas, loading, error, fetchPizzas } = usePizzaStore();
@@ -36,25 +37,9 @@ const HomePage: React.FC = () => {
     const featuredPizzas = pizzas.slice(0, 4); // Display up to 4 featured pizzas
 
     return (
-        <div className="bg-gray-50 min-h-screen">
+        <div className=" min-h-screen">
             {/* Hero Section */}
-            <section className="relative bg-cover bg-center h-[500px] flex items-center justify-center text-white"
-                style={{ backgroundImage: 'url(/images/hero-pizza.jpg)' }}> {/* Add a hero image */}
-                <div className="absolute inset-0 bg-black opacity-50"></div>
-                <div className="relative text-center z-10 p-4">
-                    <h1 className="text-5xl md:text-7xl font-extrabold mb-4 animate-fade-in-down font-display">
-                        Taste the Tradition
-                    </h1>
-                    <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto animate-fade-in-up">
-                        Freshly baked pizzas, delivered hot and delicious to your door.
-                    </p>
-                    <Link to="/menu">
-                        <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white shadow-xl animate-fade-in-up">
-                            Order Now
-                        </Button>
-                    </Link>
-                </div>
-            </section>
+            <HeroSection />
 
             {/* Featured Pizzas Section */}
             <section className="container mx-auto py-16 px-6">
@@ -81,7 +66,7 @@ const HomePage: React.FC = () => {
             </section>
 
             {/* Call to Action Section (Optional) */}
-            <section className="bg-red-700 text-white py-16 text-center">
+            <section className="bg-red-700 text-white py-10 text-center">
                 <div className="container mx-auto px-6">
                     <h2 className="text-4xl font-bold mb-4 font-heading">Craving Pizza?</h2>
                     <p className="text-xl mb-8">

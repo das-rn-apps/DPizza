@@ -22,7 +22,7 @@ const OrdersPage = lazy(() => import('./pages/orders/OrderPage'));
 function App() {
   return (
     <Router>
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen bg-amber-200">
         <Header />
         <main className="flex-grow">
           <Suspense fallback={<LoadingSpinner />}>

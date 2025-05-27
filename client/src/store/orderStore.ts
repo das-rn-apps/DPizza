@@ -1,7 +1,7 @@
 // src/store/orderStore.ts
 import { create } from "zustand";
 import { fetchOrdersByUserId, fetchOrderById } from "../api/fakeApi";
-import type { Order } from "../api/types";
+import type { Order } from "../types";
 
 interface OrderState {
   userOrders: Order[];

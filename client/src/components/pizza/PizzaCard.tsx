@@ -1,8 +1,8 @@
 // src/components/pizza/PizzaCard.tsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // For navigation
-import type { Pizza } from '../../api/types';
 import { Button } from '../ui/Button';
+import type { Pizza } from '../../types';
 
 interface PizzaCardProps {
     pizza: Pizza;
@@ -21,7 +21,7 @@ export const PizzaCard: React.FC<PizzaCardProps> = ({ pizza, onAddToCart }) => {
     };
 
     return (
-        <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-200">
+        <div className="bg-amber-100 rounded-lg shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-200">
             <Link to={`/pizza/${pizza.id}`} className="block">
                 <img
                     src={pizza.image}

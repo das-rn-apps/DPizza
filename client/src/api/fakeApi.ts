@@ -1,6 +1,6 @@
 // src/api/fakeApi.ts
 
-import type { Pizza, User, Order, CartItem } from "./types";
+import type { CartItem, Order, Pizza, User } from "../types";
 
 // --- Dummy Data ---
 const PIZZAS: Pizza[] = [
@@ -183,14 +183,6 @@ if (users.length === 0) {
   });
 }
 
-// src/api/fakeApi.ts
-
-// ... (existing imports and dummy data: PIZZAS, users, orders) ...
-
-// --- API Functions ---
-
-// ... (existing fetchPizzas, fetchPizzaById, placeOrder, loginUser, registerUser) ...
-
 export const fetchOrdersByUserId = async (userId: string): Promise<Order[]> => {
   return new Promise((resolve, _reject) => {
     setTimeout(() => {
@@ -225,5 +217,3 @@ export const fetchOrderById = async (
     }, 600);
   });
 };
-
-// ... (rest of the file) ...

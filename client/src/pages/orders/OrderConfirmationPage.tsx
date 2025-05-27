@@ -2,7 +2,7 @@
 import React from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { Button } from '../../components/ui/Button';
-import type { Order } from '../../api/types';
+import type { Order } from '../../types';
 
 const OrderConfirmationPage: React.FC = () => {
     const location = useLocation();
@@ -25,7 +25,7 @@ const OrderConfirmationPage: React.FC = () => {
     }
 
     return (
-        <div className="container mx-auto p-6 bg-gray-50 min-h-screen flex justify-center items-center">
+        <div className="container mx-auto p-6 min-h-screen flex justify-center items-center">
             <div className="bg-white rounded-xl shadow-lg p-8 max-w-2xl w-full text-center border border-gray-200">
                 <div className="text-green-500 text-6xl mb-6">
                     <i className="fas fa-check-circle"></i> {/* Requires FontAwesome */}

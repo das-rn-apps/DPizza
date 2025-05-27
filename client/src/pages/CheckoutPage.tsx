@@ -78,14 +78,14 @@ const CheckoutPage: React.FC = () => {
     }
 
     return (
-        <div className="container mx-auto p-6 bg-gray-50 min-h-screen">
+        <div className="container mx-auto p-6 min-h-screen">
             <h1 className="text-4xl font-extrabold text-center text-red-700 mb-8 font-display">
                 Checkout
             </h1>
 
             <form onSubmit={handleSubmit} className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 {/* Shipping Details */}
-                <div className="lg:col-span-2 bg-white rounded-lg shadow-md p-6 border border-gray-200">
+                <div className="lg:col-span-2 bg-amber-100 rounded-lg shadow-md p-6 border border-gray-200">
                     <h2 className="text-2xl font-bold text-gray-800 mb-6 border-b pb-4">
                         Shipping Information
                     </h2>

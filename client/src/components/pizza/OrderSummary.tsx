@@ -27,7 +27,7 @@ export const OrderSummary: React.FC<OrderSummaryProps> = ({
     }, [totalPrice]);
 
     return (
-        <div className="bg-white rounded-lg shadow-md p-6 border border-gray-200">
+        <div className="bg-amber-100 rounded-lg shadow-md p-6 border border-gray-200">
             <h2 className="text-2xl font-bold text-gray-800 mb-6 border-b pb-4">
                 Order Summary
             </h2>

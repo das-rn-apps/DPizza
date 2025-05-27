@@ -1,7 +1,7 @@
 // src/store/cartStore.ts
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
-import type { CartItem } from "../api/types";
+import type { CartItem } from "../types";
 
 interface CartState {
   items: CartItem[];
@@ -124,9 +124,6 @@ export const useCartStore = create<CartState>()(
     {
       name: "pizza-cart-storage", // unique name
       storage: createJSONStorage(() => localStorage),
-      onRehydrateStorage: () => {
-        console.log("Cart state rehydrated from local storage");
-      },
     }
   )
 );

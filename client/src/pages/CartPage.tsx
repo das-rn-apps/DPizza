@@ -37,7 +37,7 @@ const CartPage: React.FC = () => {
     }
 
     return (
-        <div className="container mx-auto p-6 bg-gray-50 min-h-screen">
+        <div className="container mx-auto p-6 min-h-screen">
             <h1 className="text-4xl font-extrabold text-center text-red-700 mb-8 font-display">
                 Your Shopping Cart
             </h1>

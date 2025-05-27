@@ -1,6 +1,6 @@
 // src/components/pizza/CartItem.tsx
 import React from 'react';
-import type { CartItem as TCartItem } from '../../api/types'; // Renaming to avoid conflict
+import type { CartItem as TCartItem } from '../../types'; // Renaming to avoid conflict
 // Renaming to avoid conflict
 import { Button } from '../ui/Button';
 
@@ -29,7 +29,7 @@ export const CartItem: React.FC<CartItemProps> = ({ item, onRemove, onUpdateQuan
     };
 
     return (
-        <div className="flex items-center justify-between bg-white p-4 rounded-lg shadow-sm mb-4 border border-gray-200">
+        <div className="flex items-center justify-between bg-amber-100 p-4 rounded-lg shadow-sm mb-4 border border-gray-200">
             <div className="flex items-center space-x-4">
                 <img
                     src={item.image}

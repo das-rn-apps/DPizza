@@ -66,7 +66,7 @@ export const Header: React.FC = () => {
                     <Link to="/cart" className={navLinkClass('/cart')} onClick={() => setIsMenuOpen(false)}>
                         <FontAwesomeIcon icon={faShoppingCart} />
                         {totalCartItems > 0 && (
-                            <span className="absolute -top-2 -right-3 bg-yellow-400 text-red-800 text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+                            <span className="absolute -top-2 -right-3 bg-blue-600 text-red-800 text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
                                 {totalCartItems}
                             </span>
                         )}

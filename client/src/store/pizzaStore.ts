@@ -1,8 +1,7 @@
 // src/store/pizzaStore.ts
 import { create } from "zustand";
 import { fetchPizzas } from "../api/fakeApi";
-import type { Pizza } from "../api/types";
-import type { PizzaFilterOptions } from "../types/pizza";
+import type { Pizza, PizzaFilterOptions } from "../types/pizza";
 
 interface PizzaState {
   pizzas: Pizza[];

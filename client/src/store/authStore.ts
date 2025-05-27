@@ -2,7 +2,7 @@
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
 import { loginUser, registerUser } from "../api/fakeApi";
-import type { User } from "../api/types";
+import type { User } from "../types";
 
 interface AuthState {
   user: User | null;
@@ -75,9 +75,6 @@ export const useAuthStore = create<AuthState>()(
     {
       name: "pizza-auth-storage",
       storage: createJSONStorage(() => localStorage),
-      onRehydrateStorage: (state) => {
-        console.log("Auth state rehydrated from local storage");
-      },
     }
   )
 );

@@ -33,7 +33,7 @@ const LoginPage: React.FC = () => {
 
     return (
         <div className="container mx-auto p-6 min-h-[calc(100vh-160px)] flex justify-center items-center">
-            <div className="bg-white rounded-xl shadow-lg p-8 w-full max-w-md border border-gray-200">
+            <div className="bg-amber-100 rounded-xl shadow-lg p-8 w-full max-w-md border border-gray-200">
                 <h1 className="text-3xl font-extrabold text-center text-red-700 mb-8 font-display">
                     Welcome Back!
                 </h1>
