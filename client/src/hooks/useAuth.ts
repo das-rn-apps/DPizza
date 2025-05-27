@@ -1,6 +1,6 @@
 // src/hooks/useAuth.ts
-import type { User } from "../api/types";
 import { useAuthStore } from "../store/authStore";
+import type { User } from "../types";
 
 interface UseAuthResult {
   isAuthenticated: boolean;
