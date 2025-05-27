@@ -31,7 +31,7 @@ const HomePage: React.FC = () => {
             selectedSize,
         };
         addItemToCart(cartItem);
-        alert(`${pizza.name} (${selectedSize}) added to cart!`);
+        // alert(`${pizza.name} (${selectedSize}) added to cart!`);
     };
 
     const featuredPizzas = pizzas.slice(0, 4); // Display up to 4 featured pizzas

@@ -41,7 +41,7 @@ const MenuPage: React.FC = () => {
             selectedSize,
         };
         addItemToCart(cartItem);
-        alert(`${pizza.name} (${selectedSize}) added to cart!`);
+        // alert(`${pizza.name} (${selectedSize}) added to cart!`);
     };
 
     return (
