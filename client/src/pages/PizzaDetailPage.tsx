@@ -84,7 +84,7 @@ const PizzaDetailPage: React.FC = () => {
 
     if (!pizza) {
         return (
-            <div className="container mx-auto p-6 h-[calc(100vh-160px)] flex justify-center items-center">
+            <div className="container mx-auto p-2 h-[calc(100vh-160px)] flex justify-center items-center">
                 <EmptyState
                     title="Pizza Not Found"
                     message="The pizza you are looking for does not exist."

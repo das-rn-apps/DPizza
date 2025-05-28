@@ -45,7 +45,7 @@ const MenuPage: React.FC = () => {
     };
 
     return (
-        <div className="container mx-auto p-6 min-h-screen">
+        <div className="container mx-auto p-2 min-h-screen">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4 mb-10 px-4">
                 <h1 className="text-3xl md:text-5xl font-bold text-red-600 font-display text-center md:text-left tracking-tight drop-shadow-sm">
                     Our Delicious Menu

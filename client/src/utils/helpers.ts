@@ -36,3 +36,6 @@ export const capitalizeFirstLetter = (str: string): string => {
 export const generateUniqueId = (): string => {
   return Date.now().toString(36) + Math.random().toString(36).substring(2);
 };
+
+export const truncate = (text: string, max: number) =>
+  text.length > max ? `${text.slice(0, max)}...` : text;

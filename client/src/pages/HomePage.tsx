@@ -42,8 +42,8 @@ const HomePage: React.FC = () => {
             <HeroSection />
 
             {/* Featured Pizzas Section */}
-            <section className="container mx-auto py-16 px-6">
-                <h2 className="text-4xl font-bold text-center text-gray-800 mb-12 font-heading">
+            <section className="container mx-auto p-2">
+                <h2 className="text-4xl font-bold text-center text-gray-800 mb-10 font-heading">
                     Our Best Sellers
                 </h2>
                 {loading && <LoadingSpinner />}
@@ -73,15 +73,18 @@ const HomePage: React.FC = () => {
                         Sign up for our newsletter to get exclusive deals and updates!
                     </p>
                     <div className="flex justify-center">
-                        <input
-                            type="email"
-                            placeholder="Enter your email"
-                            className="p-3 rounded-l-lg outline-none text-gray-900 w-full max-w-sm"
-                        />
-                        <Button className="bg-red-900 hover:bg-red-800 rounded-l-none text-white px-6">
-                            Subscribe
-                        </Button>
+                        <div className="flex w-full max-w-md shadow-lg rounded-lg overflow-hidden focus-within:ring-2 focus-within:ring-cyan-400 transition">
+                            <input
+                                type="email"
+                                placeholder="Enter your email"
+                                className="flex-1 px-4 py-3 text-sm text-gray-900 placeholder-gray-400 bg-white outline-none"
+                            />
+                            <Button className="bg-red-900 hover:bg-red-800 text-white px-6 text-sm font-medium rounded-none">
+                                Subscribe
+                            </Button>
+                        </div>
                     </div>
+
                 </div>
             </section>
         </div>

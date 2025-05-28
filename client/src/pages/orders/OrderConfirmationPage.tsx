@@ -10,7 +10,7 @@ const OrderConfirmationPage: React.FC = () => {
 
     if (!orderId || !orderDetails) {
         return (
-            <div className="container mx-auto p-6 h-[calc(100vh-160px)] flex justify-center items-center">
+            <div className="container mx-auto p-2 h-[calc(100vh-160px)] flex justify-center items-center">
                 <div className="text-center bg-white p-8 rounded-lg shadow-md border border-gray-200">
                     <h1 className="text-3xl font-bold text-red-600 mb-4">Order Details Not Found</h1>
                     <p className="text-lg text-gray-700 mb-6">
@@ -25,7 +25,7 @@ const OrderConfirmationPage: React.FC = () => {
     }
 
     return (
-        <div className="container mx-auto p-6 min-h-screen flex justify-center items-center">
+        <div className="container mx-auto p-2 min-h-screen flex justify-center items-center">
             <div className="bg-white rounded-xl shadow-lg p-8 max-w-2xl w-full text-center border border-gray-200">
                 <div className="text-green-500 text-6xl mb-6">
                     <i className="fas fa-check-circle"></i> {/* Requires FontAwesome */}

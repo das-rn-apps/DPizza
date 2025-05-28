@@ -1,8 +1,8 @@
-// src/components/pizza/PizzaCard.tsx
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // For navigation
+import { Link } from 'react-router-dom';
 import { Button } from '../ui/Button';
 import type { Pizza } from '../../types';
+import { truncate } from '../../utils/helpers';
 
 interface PizzaCardProps {
     pizza: Pizza;
@@ -21,44 +21,41 @@ export const PizzaCard: React.FC<PizzaCardProps> = ({ pizza, onAddToCart }) => {
     };
 
     return (
-        <div className="bg-amber-100 rounded-lg shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-200">
-            <Link to={`/pizza/${pizza.id}`} className="block">
+        <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow border border-gray-100 overflow-hidden">
+            <Link to={`/pizza/${pizza.id}`}>
                 <img
                     src={pizza.image}
                     alt={pizza.name}
-                    className="w-full h-48 object-cover object-center transform hover:scale-105 transition-transform duration-300"
+                    className="w-full h-40 object-cover transition-transform duration-300 hover:scale-105"
                 />
             </Link>
-            <div className="p-6">
+            <div className="p-4 space-y-2">
                 <Link to={`/pizza/${pizza.id}`}>
-                    <h3 className="text-xl font-bold text-gray-800 mb-2 hover:text-red-600 transition-colors">
+                    <h3 className="text-lg font-semibold text-gray-800 hover:text-red-600 transition-colors truncate">
                         {pizza.name}
                     </h3>
                 </Link>
-                <p className="text-sm text-gray-600 mb-3 line-clamp-2">{pizza.description}</p>
-                <div className="flex justify-between items-center mb-4">
-                    <span className="text-2xl font-extrabold text-red-700">
-                        ${pizza.price.toFixed(2)}
-                    </span>
-                    <div className="flex items-center space-x-2">
-                        <label htmlFor={`size-${pizza.id}`} className="sr-only">Select size</label>
-                        <select
-                            id={`size-${pizza.id}`}
-                            value={selectedSize}
-                            onChange={handleSizeChange}
-                            className="p-2 border border-gray-300 rounded-md text-sm bg-white focus:outline-none focus:ring-2 focus:ring-red-500"
-                        >
-                            {pizza.sizes.map((size) => (
-                                <option key={size} value={size}>
-                                    {size}
-                                </option>
-                            ))}
-                        </select>
-                    </div>
+                <p className="text-sm text-gray-500">{truncate(pizza.description, 36)}</p>
+
+
+                <div className="flex items-center justify-between">
+                    <span className="text-lg font-bold text-red-600">${pizza.price.toFixed(2)}</span>
+                    <select
+                        value={selectedSize}
+                        onChange={handleSizeChange}
+                        className="text-sm rounded-md border border-gray-300 px-2 py-1 focus:outline-none focus:ring-1 focus:ring-red-500"
+                    >
+                        {pizza.sizes.map((size) => (
+                            <option key={size} value={size}>
+                                {size}
+                            </option>
+                        ))}
+                    </select>
                 </div>
+
                 <Button
                     onClick={handleAddClick}
-                    className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+                    className="w-full bg-red-500 hover:bg-red-600 text-white text-sm font-medium py-2 rounded-md mt-2 transition"
                 >
                     Add to Cart
                 </Button>

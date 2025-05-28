@@ -38,7 +38,7 @@ const HeroSection = () => {
     });
 
     return (
-        <section className="relative h-[500px] flex items-center justify-center text-black overflow-hidden">
+        <section className="relative h-screen flex items-center justify-center text-black overflow-hidden">
             {/* 50 Floating Pizza Emojis */}
             <div className="absolute inset-0 z-0">
                 {floatingPizzas}

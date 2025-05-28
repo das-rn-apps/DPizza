@@ -36,7 +36,7 @@ const OrdersPage: React.FC = () => {
 
     if (errorOrders) {
         return (
-            <div className="container mx-auto p-6 h-[calc(100vh-160px)] flex justify-center items-center">
+            <div className="container mx-auto p-2 h-[calc(100vh-160px)] flex justify-center items-center">
                 <EmptyState
                     title="Error Loading Orders"
                     message={errorOrders}
@@ -50,7 +50,7 @@ const OrdersPage: React.FC = () => {
 
     if (userOrders.length === 0 && !loadingOrders) {
         return (
-            <div className="container mx-auto p-6 min-h-[calc(100vh-160px)] flex justify-center items-center">
+            <div className="container mx-auto p-2 min-h-[calc(100vh-160px)] flex justify-center items-center">
                 <EmptyState
                     title="No Orders Yet"
                     message="It looks like you haven't placed any orders with us."
@@ -63,7 +63,7 @@ const OrdersPage: React.FC = () => {
     }
 
     return (
-        <div className="container mx-auto p-6  min-h-screen">
+        <div className="container mx-auto p-2  min-h-screen">
             <h1 className="text-4xl font-extrabold text-center text-red-700 mb-8 font-display">
                 Your Orders
             </h1>
