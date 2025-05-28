@@ -12,7 +12,7 @@ import { protect, authorizeRoles } from "../middlewares/authMiddleware";
 const router = Router();
 
 // Public route for creating an order (can be used by guests or logged-in users)
-router.post("/", createOrder);
+router.post("/", protect, createOrder);
 
 // Private routes for users
 router.get("/myorders", protect, getMyOrders); // Get logged-in user's orders
